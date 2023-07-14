@@ -1,9 +1,7 @@
 <?php
-
-include_once __DIR__ . '/../classes/Category.php';
 include_once __DIR__ . '/../classes/User.php';
+include_once __DIR__ . '/../classes/Category.php';
 include_once __DIR__ . '/../classes/Post.php';
-
 
 $testContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci doloremque illum dignissimos sequi voluptatum explicabo tempora magni, voluptates maxime dolores deserunt recusandae, ab, saepe debitis. Obcaecati at deserunt quidem reiciendis!
 Atque rerum, dolor nobis officiis iure nam. Voluptatum, minima omnis sequi magnam atque ad deleniti corporis maiores quibusdam accusamus explicabo, nesciunt doloribus est quae qui? Minus eius consequatur distinctio aliquam.
@@ -38,28 +36,34 @@ Magnam minus iure ipsum deleniti nesciunt consequatur? Incidunt quis porro amet 
 
 
 $categories = [
-    new Category('News', ''),
-    new Category('Sport', ''),
-    new Category('Life Drama', ''),
-    new Category('Life Happiness', ''),
+    new Category('News', 'https://source.unsplash.com/random/200x200?sig='.rand(100,200)),
+    new Category('Sport','https://source.unsplash.com/random/200x200?sig='.rand(100,200)),
+    new Category('Life Drama', 'https://source.unsplash.com/random/200x200?sig='.rand(100,200)),
+    new Category('Life Happiness', 'https://source.unsplash.com/random/200x200?sig='.rand(100,200)),
 ];
 
 $users = [
-    new User('ginetta', 'gingina@gmail.com', ''),
-    new User('gino', 'ginothebest@gmail.com', ''),
-    new User('huanno', 'lamborghino@gmail.com', ''),
-    new User('didino', 'nonbevoanchesesonoveneto@gmail.com', ''),
-    new User('denoise', 'cybersoberasatazer@gmail.com', ''),
+    new User('ginetta', 'gingina@gmail.com', 'https://source.unsplash.com/random/400x400?sig='.rand(100,200)),
+    new User('gino', 'ginothebest@gmail.com', 'https://source.unsplash.com/random/400x400?sig='.rand(100,200)),
+    new User('huanno', 'lamborghino@gmail.com', 'https://source.unsplash.com/random/400x400?sig='.rand(100,200)),
+    new User('didino', 'nonbevoanchesesonoveneto@gmail.com', 'https://source.unsplash.com/random/400x400?sig='.rand(100,200)),
+    new User('denoise', 'cybersoberasatazer@gmail.com', 'https://source.unsplash.com/random/400x400?sig='.rand(100,200)),
 ];
 
 
 $posts = [
-    new Post( new DateTime(), 'Mi sono scordato di scordarmi lo scordamento', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories) - 1)]),
-    new Post( new DateTime(), 'Che spettacolo il backend', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories)  - 1)]),
-    new Post( new DateTime(), 'Non si dorme in Italia a Luglio', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories) - 1)]),
-    new Post( new DateTime(), 'Tutti al lago a casa della mama di Ruggeri', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories) - 1)]),
-    new Post( new DateTime(), 'Scoca smettila di andare nei campi elisi', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories) - 1)]),
-    new Post( new DateTime(), 'Lisa nun fa l\'anziosa stasera (e manco domani)', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random', $testContent, $categories[rand(0, count($categories) - 1)])
+    new Post( new DateTime(), 'Mi sono scordato di scordarmi lo scordamento', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Che spettacolo il backend', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories)  - 1)]),
+    new Post( new DateTime(), 'Non si dorme in Italia a Luglio', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Tutti al lago a casa della mama di Ruggeri', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Scoca smettila di andare nei campi elisi', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Lisa nun fa l\'anziosa stasera (e manco domani)', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Mi sono scordato di scordarmi lo scordamento', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Che spettacolo il backend', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories)  - 1)]),
+    new Post( new DateTime(), 'Non si dorme in Italia a Luglio', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Tutti al lago a casa della mama di Ruggeri', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Scoca smettila di andare nei campi elisi', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)]),
+    new Post( new DateTime(), 'Lisa nun fa l\'anziosa stasera (e manco domani)', $users[rand(0, count($users) - 1)], 'https://source.unsplash.com/random/250x400?sig='.rand(0,100), $testContent, $categories[rand(0, count($categories) - 1)])
 ];
 
 
