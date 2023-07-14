@@ -1,7 +1,4 @@
 <?php
-    include_once __DIR__ . '/classes/Category.php';
-    include_once __DIR__ . '/classes/User.php';
-    include_once __DIR__ . '/classes/Post.php';
     include_once __DIR__ . '/db/db.php';
 ?>
 
